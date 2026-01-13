@@ -1,0 +1,135 @@
+/* ===== RESET DASAR ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ===== HALAMAN AWAL ===== */
+.container {
+    height: 100vh;
+    background: linear-gradient(135deg, #0057b8, #00aaff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.container p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.container button {
+    padding: 15px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.container button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== KONTEN UTAMA ===== */
+.content {
+    display: none;
+    padding: 80px 60px;
+    background: #ffffff;
+}
+
+/* ===== GAMBAR JEDAG JEDUG ===== */
+.gambar-wrapper {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#fotoBNN {
+    width: 360px;
+    max-width: 90%;
+    border-radius: 25px;
+    animation: jedag 1.3s infinite ease-in-out;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+@keyframes jedag {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* ===== VISI & MISI ===== */
+.visi, .misi {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: rgba(0, 123, 255, 0.08);
+    padding: 35px 45px;
+    border-radius: 22px;
+    color: #0a2a66;
+    position: relative;
+    z-index: 5;
+}
+
+.visi h2, .misi h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.visi p, .misi p {
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+/* ===== LOVE MELAYANG ===== */
+.love {
+    position: fixed;
+    bottom: -30px;
+    font-size: 26px;
+    animation: floatUp 6s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+
+/* ===== RESPONSIVE HP ===== */
+@media (max-width: 768px) {
+    .content {
+        padding: 50px 20px;
+    }
+
+    .visi p, .misi p {
+        font-size: 18px;
+    }
+
+    .visi h2, .misi h2 {
+        font-size: 26px;
+    }
+}
